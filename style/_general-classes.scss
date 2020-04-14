@@ -1,0 +1,218 @@
+* {
+  outline: none !important;
+  //outline: 1px red solid !important;
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100vw;
+  font-family: $montserrat;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  background-color: $body-color;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 400ms;
+  
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+a {
+  @extend .auth-primary-color;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.hover-arrow {
+  %fa-icon, .fa-angle-left {
+    transition: all 400ms;
+  }
+  
+  &:hover {
+    %fa-icon {
+      transform: translateX(30%) rotateX(0.01deg) !important;
+    }
+    
+    .fa-angle-left {
+      transform: translateX(-30%) rotateX(0.01deg) !important;
+    }
+  }
+}
+
+%hover-zoom {
+  transition: transform 400ms;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.hover-darken {
+  transition: filter 400ms;
+  
+  &:hover {
+    filter: brightness(0.6);
+  }
+}
+
+.hover-lighten {
+  transition: filter 400ms;
+  
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+.fa-long-arrow-right {
+  @extend %fa-icon;
+}
+
+.fa-angle-right {
+  @extend %fa-icon;
+}
+
+%fa-icon {
+  @extend .auth-neutral-color;
+  margin-left: 7px;
+  font-size: 16px;
+}
+
+//region Typography
+
+.title {
+  font-size: 25px;
+  font-family: $encode;
+  font-weight: 100;
+  color: $title-color;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 15px;
+  @include max-small-screen {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+  }
+}
+
+.main-title {
+  font-family: $poppins;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 44px;
+  color: $primary-color;
+  margin-bottom: 20px;
+  text-align: center;
+  @include max-medium-screen {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  @include xx-small-screen {
+    margin-bottom: 10px;
+  }
+}
+
+.sub-title {
+  font-family: $poppins;
+  color: $secondary-color;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 29.25px;
+  transition: color 400ms ease-in-out;
+  @include max-medium-screen {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  @include max-small-screen {
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+  
+  }
+  
+}
+
+//endregion Typography
+
+//region site color classes
+
+$color-names: "neutral", "primary", "secondary", "tertiary";
+$colors: $neutral-color, $primary-color, $secondary-color, $tertiary-color;
+$types: "", "background-", "border-";
+
+@for $color from 1 through 4 {
+  @each $type in $types {
+    
+    .auth-#{nth($color-names, $color)+'-'}#{$type}color {
+      #{$type}color: nth($colors, $color);
+    }
+    
+  }
+}
+
+//endregion site color classes
+
+
+.grow {
+  width: 320px !important;
+  
+}
+
+.opacity {
+  opacity: 1 !important;
+  transition: opacity 0.4s linear !important;
+}
+
+.active {
+  @include max-medium-screen{
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes height {
+  
+  20%, 60%, 100% {
+    height: 115%;
+  }
+  40%, 80% {
+    height: 110%;
+  }
+  
+}
+
+@keyframes top {
+  from{
+    top: 0;
+  }
+  to{
+    top: 100%;
+  }
+  
+}
+
+

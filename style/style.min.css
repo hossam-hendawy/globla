@@ -1,0 +1,154 @@
+.header{
+    background-color: #056982;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+}
+.contanr-authxperts-img {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    
+}
+.
+
+
+
+.the-author-contaner {
+    display: flex;
+    align-items: center;
+    flex-basis: 80%;
+    justify-content: flex-end;
+    margin-right: 40px;
+    
+}
+.phone-img{
+    display: flex;
+    width: 17px;
+}
+
+.this-is-number{
+    width: 150px;
+    height: 16px;
+    color: #ffffff;
+    font-family: $montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+letter-spacing: 0.7px;
+    padding-left: 5px;
+    
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70px;
+    flex-basis: 30%;
+}
+
+span{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    color: #ecf2f3;
+    font-family: $montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    position: relative;
+}
+
+
+span:hover{
+    cursor: pointer;
+    
+}
+
+
+.three-point{
+    
+    display: flex;
+    justify-content: center;
+    flex-basis: 7%;
+}
+
+.point{
+    width: 5px;
+    height: 5px;
+    background-color: #00dcaf;
+    border-radius: 50%;
+    margin-left: 3px;
+}
+.contact-us{
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #00dcaf;
+    background-image: linear-gradient(to left, #00dcaf 0%, #87f082 100%);
+    border: none;
+    margin-right: 50px;
+    transition: all 500ms ease-in-out;
+    border-bottom: ;
+    
+}
+.contact-us:hover{
+    cursor: pointer;
+    color: #ffffff;
+}
+
+
+
+
+.underline-decoration {
+    position: relative; }
+.underline-decoration:before {
+    content: '';
+    width: 100%;
+    height: 0;
+    background-color: #00dcaf;
+    transition: all 400ms ease-in-out;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0); }
+.underline-decoration:hover:before {
+    height: 4px;
+    cursor: pointer;
+    }
+
+/*.appear-when-hover{*/
+    /*background-color: #00dcaf;*/
+    /*width: 100%;*/
+    /*height: 5px;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, 0);*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /**/
+    /*display: none;*/
+    /**/
+/*}*/
+
+.home-hero-bg{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 400ms;
+    background-color: rgba(35, 145, 175, 0.2);
+}
+
+.upper-img{
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(35, 145, 175, 0.2);
+    width: 1349px;
+    height: 556px;
+
+}
