@@ -75,13 +75,7 @@
             height: 186px;
             margin: 0 auto;
             @include max-small-screen {
-              width: 350px;
-            }
-            @include max-x-small-screen {
-              width: 400px;
-            }
-            @include xx-small-screen {
-              width: 340px;
+              width: 320px;
             }
             
           }
@@ -92,8 +86,8 @@
             font-size: 33px;
             line-height: 50px;
             @include max-small-screen {
-              font-size: 30px;
-              margin-left: 5px;
+              font-size: 25px;
+              margin-top: 50px;
             }
             
           }
@@ -1062,7 +1056,7 @@
               
             }
             
-            .sub-title {
+            .pro-title {
               width: 100%;
               position: absolute;
               left: 0;
@@ -1093,7 +1087,7 @@
               pointer-events: visible;
             }
             
-            .sub-title {
+            .pro-title {
               padding: 15px 0;
               pointer-events: visible;
               opacity: 1;
