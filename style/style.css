@@ -6895,7 +6895,7 @@ div > .toggleable-slide-up-header > .fa-chevron-circle-up {
     border-top: 1px solid #cecece;
     width: 100%;
     position: absolute;
-    top: 100%;
+    top: 94%;
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%); }
     /* line 97, layouts/_sidebar.scss */
